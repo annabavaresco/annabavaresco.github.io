@@ -3,40 +3,7 @@
 <head>
 <title>Anna Bavaresco</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="new_style.css">
-<style>
-.button {
-  
-  font-family: 'Century Gothic', sans-serif;
-  background-color: #008CBA; 
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: #6abdd9;
-}
-
-.button-group {
-  background-color: #008bba69; /* Light gray */
-}
-
-.icon {
-    display:inline-block;
-    background-image:url('home-icon.png');
-    width:20px;
-    height:20px;
-    margin-right:5px;
-}
-
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -44,18 +11,67 @@
 
 <div class="button-group">
 <!-- <button class="button home"><span class="icon"></span>Home</button> -->
-<button class="button"><i class="fa fa-home"></i> Home</button>
+<button class="button" onclick="window.open('index.html', '_self');"><i class="fa fa-home"></i> HOME</button>
+<!-- <button class="button" onclick="window.open('index.html', '_self');">	&#xf518 HOME</button> -->
 
-<button class="button">Button1</button>
-<button class="button">Button2</button>
+<button class="button" onclick="window.open('publications.html', '_self');"><i class="fa fa-book"></i> PUBLICATIONS</button>
+<button class="button" onclick="window.open('about.html', '_self');"><i class="fa fa-id-card"></i> ABOUT</button>
 </div>
 
 <h1>Anna Bavaresco</h1>
 
 <div class="container">
-    <img src="my_picture.png" alt="My profile picture" width="200" height="200">
-    <p>Your text goes here.</p>
+    <img src="my_picture.png" alt="My profile picture">
+    <p> 
+      I am currently an <a href="https://ellis.eu/" target="_blank">ELLIS</a> PhD student at the University of Amsterdam.
+      I am part of the <a href="https://dmg-illc.github.io/dmg/" target="_blank">Dialogue Modelling Group</a> and my research 
+      interests include computational linguistics, pragmatics, and visually-grounded linguistic models. I am really 
+      passionate about both AI and Cognitive Science and with my work I strive to bring together the 
+      <a href="https://www.youtube.com/watch?v=Xw23EVCSqOY&ab_channel=HannahMontana%28MileyCyrus%29-Topic" target="_blank">best of
+        both worlds</a>.
+    </p>
+</div>
+
+<h2>A little bit about my background</h2>
+
+<div class="paragraph">
+  <p>
+    I hold a BSc in Science and Technology of Cognitive Psychology and a MSc in Data Science, both pursued at
+  the <a href="https://www.unitn.it/en" target="_blank">University of Trento</a>, Italy. The title of my Master's 
+  thesis was <i>Modelling Human Representational Space Using Wighted Pruning of Deep Neural Networks and 
+    Similarity-Based Soft Labels</i>.
+  </p>
+
+</div>
+
+
+<div class="paragraph">
+  <p> 
+    After finishing my Master's I spent four months as a research fellow at the 
+    <a href="https://www.cimec.unitn.it/en" target="_blank">Center for Mind/Brain Sciences</a> (CIMeC), 
+    working with prof. Uri Hasson. My work at CIMeC was mostly concerned with using DNNs (Deep Neural Networks)
+    trained for image classification to predict human behaviour. 
+  </p>
+</div>
+
+<h2>Recent projects and conferences</h2>
+<div class = "last-para">
+  <b>2022</b>
+  <p>
+    <ul>
+      <li><a href="https://event.unitn.it/aisc2022/">AISC2022</a>: Annual Conference of the Italian Association of Cognitive Sciences
+        [<a href="Publications\AISC_abstract.pdf" target="_blank">Abstract</a>]</li>
+    </ul>
+  </p>
+</div>
+<center>
+  <div class="contactgroup">
+    <a href="a.bavaresco@uva.nl" target="_blank" class="social-icon"> <i class="fa fa-envelope"></i></a>
+    <a href="https://www.linkedin.com/in/anna-bavaresco-446210243" target="_blank" class="social-icon"> <i class="fa fa-linkedin"></i></a>
+    <a href="https://github.com/annabavaresco" target="_blank" class="social-icon"> <i class="fa fa-github"></i></a>
+    <a href="https://twitter.com/AnnaBavare44729" target="_blank" class="social-icon"> <i class="fa fa-twitter"></i></a>    
   </div>
+</center>
 
 <!-- <img src="my_picture.png" alt="Avatar" width="200" height="200">
 
