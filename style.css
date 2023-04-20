@@ -64,11 +64,12 @@ img {
 }
 
 a:link {
-    color: r#008CBA;
+    color: #008CBA;
+    ;
 }
   
 a:visited {
-    color: #008bba69;
+    color: #9a9ea0;
 }
   
 a:hover {
