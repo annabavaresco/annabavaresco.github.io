@@ -52,31 +52,46 @@ body {
 }
 
 .container {
-    background-image: url('Tech background.png');
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 10px 0px;
     color: white;
+    opacity: 1;
+    position: relative;
 }
+
+.container::before {    
+    content: "";
+    background-image: url('Tech background.png');
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+}
+
 
 
 .container img {
     width: 18%;
     margin-bottom: 20px;
     margin: 20px 40px;
+    position: relative;
 }
 
 .container a:link {
 
-    color: rgb(200, 241, 250);
+    color: hsl(195, 96%, 32%);
 
 }
 
 .container a:visited {
 
-    color: rgba(175, 210, 218, 0.907);
+    color: hsl(195, 96%, 32%);
 
 }
 
@@ -85,6 +100,7 @@ body {
     margin: 20px 40px;
     font-size: 20px;
     text-align: center;
+    position: relative;
 }
 
 a:link {
