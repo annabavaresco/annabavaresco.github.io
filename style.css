@@ -11,6 +11,7 @@ h1 {
 
 h2 {
     margin: 20px 40px;
+    color: #008CBA;
 }
 
 body {
@@ -51,12 +52,15 @@ body {
 }
 
 .container {
-    width: 90%;
+    background-image: url('Tech background.png');
+    width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    margin: 20px 40px;
+    margin: 10px 0px;
+    color: white;
 }
+
 
 .container img {
     width: 18%;
@@ -64,12 +68,23 @@ body {
     margin: 20px 40px;
 }
 
+.container a:link {
 
+    color: rgb(200, 241, 250);
+
+}
+
+.container a:visited {
+
+    color: rgba(175, 210, 218, 0.907);
+
+}
 
 .container p {
-    width: 60%;
+    width: 65%;
     margin: 20px 40px;
     font-size: 20px;
+    text-align: center;
 }
 
 a:link {
