@@ -48,6 +48,7 @@
       
     
     .container {
+        background-image: url('Tech background.png');
         width: 100%;
         display: flex;
         flex-direction: column;
