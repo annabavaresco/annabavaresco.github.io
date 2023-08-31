@@ -98,7 +98,7 @@ body {
 .container p {
     width: 65%;
     margin: 20px 40px;
-    font-size: 20px;
+    font-size: 24px;
     text-align: center;
     position: relative;
 }
@@ -118,7 +118,7 @@ a:hover {
 
 
 .paragraph {
-    font-size: 16px;
+    font-size: 20px;
     margin: 20px 40px;
     width: 70%;
 
@@ -163,7 +163,7 @@ a:hover {
 }
 
 .last-para{
-    font-size: 16px;
+    font-size: 20px;
     margin: 20px 40px;
     width: 70%;
     padding-bottom: 70px;
