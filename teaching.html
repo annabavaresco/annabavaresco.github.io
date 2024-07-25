@@ -1,0 +1,19 @@
+---
+layout: default
+title : Teaching
+navbar_name: Teaching
+---
+
+<h2 class="pt-4" id="year-{{ year.name }}">Teaching</h2>
+<p class="mt-0 mb-0 small text-muted">This page contains some information about the courses that I TA as part of
+    my PhD.
+</p>
+
+<div class="my-3 p-0 bg-white shadow-sm rounded-sm">
+    <h4 class="border-bottom border-gray p-3 mb-0">
+        2024/2025 
+    </h4>
+    {% assign item1 = site.taught_courses | where: "course_id", "ANCM24" | first %}
+    {% include widgets/teaching_item.html item=item1 %}
+</div>
+

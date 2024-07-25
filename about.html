@@ -1,62 +1,119 @@
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="icon" type="image/png" href="ab_logo.png"/>
-<title>About</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="phone_style.css">
-</head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<body>
+---
+layout: default
+title : About
+navbar_name: About
+<!-- body_attr: >-
+  data-spy="scroll" data-target="#navbar-year" data-offset="100" -->
+---
 
-    <div class="exp-button-group">
-        <div>
-            <button class="button" onclick="window.open('index.html', '_self');"><i class="fa fa-home"></i> HOME</button>
+<h2 class="pt-4" id="year-{{ year.name }}">About</h2>
+
+<div class="my-3 p-0 bg-white shadow-sm rounded-sm">
+    <h4 class="border-bottom border-gray p-3 mb-0">
+        Education 
+        <!-- <a href="publications">(view all <i class="fas fa-angle-double-right"></i>)</a> -->
+    </h4>
+
+    <div class="d-none d-md-block">
+        <div class="row no-gutters border-bottom border-gray">
+
+            <div class="col p-3 ml-md-2">
+                <p class="mt-0 mb-0 small text-muted">2020-2022, University of Trento</p>
+                <h6 class="mt-0 mb-1 font-weight-normal">MSc in Data Science</h6>
+                
+            </div>
+
         </div>
-        <div>
-            <a href="a.bavaresco@uva.nl" target="_blank" class="social-icon-upper"> <i class="fa fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/anna-bavaresco-446210243" target="_blank" class="social-icon-upper"> <i class="fa fa-linkedin"></i></a>
-            <a href="https://github.com/annabavaresco" target="_blank" class="social-icon-upper"> <i class="fa fa-github"></i></a>
-            <a href="https://twitter.com/AnnaBavare44729" target="_blank" class="social-icon-upper"> <i class="fa fa-twitter"></i></a>
-        </div>
-      </div>
-
-    
-    
-    <h1 style="text-align: center;">About Me</h1>
-
-    <h2 style="padding-top: 30px;">Education</h2>
-    <div class="paragraph">
-        <p>
-            <b>2020-2022</b> MSc in Data Science at the <a href="https://www.unitn.it/en" target="bl
-            ">University of Trento</a><br>
-            <b>Sep 2021 - Jan 2022</b> Exchange student at <a href="https://www.uu.nl/en" target="bl
-            ">Utrecht University</a> <br>
-            <b>2017-2020</b> BSc in Science and Technology of Cognitive Psychology at the <a href="https://www.unitn.it/en" target="bl
-            ">University of Trento</a><br>
-        </p>
-
     </div>
 
-    <h2>Working and Academic Experience</h2>
-
-    <div class="paragraph">
-        <p>
-            <b>Jan 2023 - May 2023</b> Research assistant at the <a href="https://www.cimec.unitn.it/en" target="_blank">Center for Mind/Brain Sciences</a>. 
-            I was part of the <a href="https://www.cimec.unitn.it/en/776/information-and-integration-lab#on" target="_blank">Information and Integration Lab</a>, 
-            coordinated by prof. <a href="https://webapps.unitn.it/du/en/Persona/PER0048943/Curriculum" target="_blank">Uri Hasson</a>. <br> 
-            <b>Mar 2022 - May 2022</b> Intern at the <a href="https://www.cimec.unitn.it/en" target="_blank">Center for Mind/Brain Sciences</a> <br>
-            <b>Feb 2021 - Sep 2022</b> Student collaborator at the International Mobility Office of the University of Trento.<br>
-        </p>
+    <div class="d-none d-md-block">
+        <div class="row no-gutters border-bottom border-gray">
+            <div class="col p-3 ml-md-2">
+                <!-- <p class="mt-0 mb-0 small text-muted">Sep 2021-Jan 2022</p> -->
+                <p class="mt-0 mb-0 small text-muted">Sep 2021-Jan 2022, Utrecht university</p>
+                <h6 class="mt-0 mb-1 font-weight-normal">Erasmus exchange</h6>
+                
+            </div>
+        </div>
     </div>
 
 
 
+    <div class="d-none d-md-block">
+        <div class="row no-gutters border-bottom border-gray">
+            <div class="col p-3 ml-md-2">
+                <!-- <p class="mt-0 mb-0 small text-muted">2017-2020</p> -->
+                <p class="mt-0 mb-0 small text-muted">2017-2020, University of Trento</p>
+                <h6 class="mt-0 mb-1 font-weight-normal">BSc in Science and Technology of Cognitive Psychology</h6>
+                
+            </div>
+        </div>
+    </div>
 
 
 
+
+
+    <h4 class="border-bottom border-gray p-3 mb-0">
+        Working and academic experience 
+        <!-- <a href="publications">(view all <i class="fas fa-angle-double-right"></i>)</a> -->
+    </h4>
+    <!-- {{ site.data.profile.short_bio }} -->
+    <!-- {{ site.work.profile_copy.primary_name }} -->
+    {% assign item1 = site.work | where: "position", "Research Assistant" | first %}
+    {% include widgets/work_item.html item=item1 %}
+
+    {% assign item2 = site.work | where: "position", "Research Intern" | first %}
+    {% include widgets/work_item.html item=item2 %}
+
+    {% assign item3 = site.work | where: "position", "Student Collaborator" | first %}
+    {% include widgets/work_item.html item=item3 %}
+    <!-- {% for item in work.items %}
+                {% include widgets/work_item.html item=item %}
+    {% endfor %} -->
+    <!-- <div class="d-none d-md-block">
+        <div class="row no-gutters border-bottom border-gray">
     
+            <div class="col p-3 ml-md-2">
+                <p class="mt-0 mb-0 small text-muted">Jan 2023-May 2023, <a href="https://www.cimec.unitn.it/en" target="_blank">CIMeC</a></p>
+                <h6 class="mt-0 mb-1 font-weight-normal">Research Assistant</h6>
+                <p class="mt-0 mb-0 small text-muted">I was part of the <a href="https://www.cimec.unitn.it/en/776/information-and-integration-lab#on" target="_blank">Information and Integration Lab</a>, 
+                    coordinated by <a href="https://webapps.unitn.it/du/en/Persona/PER0048943/Curriculum" target="_blank">Uri Hasson</a>.
+                    I conducted research on deep convolutional neural networks (DCNNs) as models of human perception of 
+                    visual similarity.
+                </p>
+            </div>
+        </div>
+    </div> -->
 
-</body>
-</html>
+    <!-- <div class="d-none d-md-block">
+        <div class="row no-gutters border-bottom border-gray">
+            <div class="col p-3 ml-md-2">
+                <p class="mt-0 mb-0 small text-muted">Mar 2022-May 2022, <a href="https://www.cimec.unitn.it/en" target="_blank">CIMeC</a></p>
+                <h6 class="mt-0 mb-1 font-weight-normal">Research Intern</h6>
+                <p class="mt-0 mb-0 small text-muted">I took part in a research project coordinated by <a href="https://webapps.unitn.it/du/en/Persona/PER0048943/Curriculum" target="_blank">Uri Hasson</a>. My main task was to 
+                    develop a feature selection algorithm in the context of vision DNN pruning. My contribution
+                    to the project was included in <a href="https://www.sciencedirect.com/science/article/pii/S0893608023004690" target="_blank">this</a> publication.  
+            </p>
+            </div>
+        </div>
+    </div> -->
+
+
+    <!-- <div class="d-none d-md-block">
+        <div class="row no-gutters border-bottom border-gray">
+            <div class="col p-3 ml-md-2">
+                <p class="mt-0 mb-0 small text-muted">Feb 2021-Sep 2022, Internationa Mobility Office of the University of Trento</p>
+                <h6 class="mt-0 mb-1 font-weight-normal">Student Collaborator</h6>
+                <p class="mt-0 mb-0 small text-muted">My job was to officially nominate outgoing Erasmus students 
+                    and trainees to the partner universities, to prepare their financial agreements, and to accompany 
+                    incoming international students during their appointments at the immigration office. I found
+                    this job very enriching, as it gave me the opportunity to meet many international students and, at the same time,
+                    do somehting useful for my fellow Unitn students.
+                </p>
+            </div>
+
+        </div>
+    </div> -->
+</div>
+

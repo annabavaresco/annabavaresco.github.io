@@ -1,102 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="icon" type="image/png" href="ab_logo.png"/>
-<title>Anna Bavaresco</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="phone_style.css">
-</head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<body>
+---
+layout: default
+title : Homepage
+navbar_name: Home
+num_selected: 10
+---
+{% include widgets/profile_card.html %}
 
+<!-- {% include widgets/experience_card.html %} -->
 
+{% assign news = site.news | sort: "date" | reverse | group_by_exp: "item", "item.date | date: '%Y'" %%}
 
-<div class="button-group">
-<button class="button" onclick="window.open('index.html', '_self');"><i class="fa fa-home"></i> HOME</button>
-<button class="button" onclick="window.open('publications.html', '_self');"><i class="fa fa-book"></i> PUBLICATIONS</button>
-<button class="button" onclick="window.open('about.html', '_self');"><i class="fa fa-id-card"></i> ABOUT</button>
-</div>
-
-
-
-<div class="container">
-
-  <h1>Anna Bavaresco</h1>
-    <img src="my_picture.png" alt="My profile picture">
-    <p> 
-      I am currently a PhD student in the <a href="https://ellis.eu/" target="_blank">ELLIS</a> program at the <a href="https://www.uva.nl/en" target="_blank">University of Amsterdam</a>. I am supervised by
-      <a href="https://staff.fnwi.uva.nl/r.fernandezrovira/" target="_blank">Raquel Fernández</a> and co-supervised by <a href="https://people.cs.kuleuven.be/~sien.moens/">Marie-Francine Moens</a> (<a href="https://www.kuleuven.be/english/kuleuven/" target="_blank">KU Leuven</a>). My research 
-      focuses on computational linguistics and visually-grounded linguistic models. I am deeply interested in both AI and Cognitive Science, 
-      and through my work, I aim to bridge the gap between these two disciplines.
-    </p>
-</div>
-
-
-<h2>A little bit about my background</h2>
-
-<div class="paragraph">
-  <p>
-    I hold a BSc in Science and Technology of Cognitive Psychology and a MSc in Data Science, both pursued at
-  the <a href="https://www.unitn.it/en" target="_blank">University of Trento</a>, Italy. The title of my Master's 
-  thesis was <i>Modelling Human Representational Space Using Wighted Pruning of Deep Neural Networks and 
-    Similarity-Based Soft Labels</i>.
-  </p>
-
-</div>
-
-
-<div class="paragraph">
-  <p> 
-    After finishing my Master's, I spent four months as a research assistant at the 
-    <a href="https://www.cimec.unitn.it/en" target="_blank">Center for Mind/Brain Sciences</a> (CIMeC), 
-    collaborating with prof. <a href="https://webapps.unitn.it/du/en/Persona/PER0048943/Curriculum" target="_blank">Uri Hasson</a>.
-    
-    My work at CIMeC was mostly concerned with using DNNs (Deep Neural Networks)
-    trained for image classification to predict human behaviour. 
-  </p>
-</div>
-
-<h2>News</h2>
-<div class = "last-para">
-  <b>2024</b>
-  <ul>
-    <li>June: new <a href="https://arxiv.org/abs/2406.18403" target="_blank">preprint</a> with an amazing team!</li>
-    <li>May: new <a href="https://arxiv.org/abs/2405.20846" target="_blank">paper</a> accepted to ACL!</li>
-  </ul>
-  <b>2023</b>
-  <ul>
-    <li>September: new <a href="https://www.sciencedirect.com/science/article/pii/S0893608023004690?via%3Dihub" target="_blank">paper</a> published on <i>Neural Networks</i>. Led by Priya Tarigopula, with Dr. Scott Fairhal, Nhut Truong and Dr. Uri Hasson</li>  
-    <li>August: <a href="https://jov.arvojournals.org/article.aspx?articleid=2791536" target="_blank">abstract</a> published on the <i>Journal of Computer Vision</i>, with Nhut Truong and Dr. Uri Hasson</li>
-    <li>June: joined the <a href="https://dmg-illc.github.io/dmg/" target="_blank">Dialogue Modelling Group</a> 
-      at the <a href="https://www.illc.uva.nl/" target="_blank">ILLC</a> (University of Amsterdam)
-      as a PhD student
-    <li>January: started working as a research assistant at <a href="https://www.cimec.unitn.it/en" target="_blank">CIMeC</a> </li>
-  </ul>
-  <b>2022</b>
-  <p>
-    <ul>
-      <li><a href="https://event.unitn.it/aisc2022/">AISC 2022</a>: Annual Conference of the Italian Association of Cognitive Sciences</li>
-      <li> September: graduated from the <a href="https://offertaformativa.unitn.it/en/lm/data-science" target="_blank">Data Science</a> program of the <a href="https://www.unitn.it/en" target="_blank">University of Trento</a> </li>
-    </ul>
-    
-  </p>
-</div>
-<center>
-  <div class="contactgroup">
-    <a class="social-icon" href="mailto:a.bavaresco@uva.nl" target="_blank" > <i class="fa fa-envelope"></i></a>
-    <a class="social-icon" href="https://www.linkedin.com/in/anna-bavaresco-446210243" target="_blank" > <i class="fa fa-linkedin"></i></a>
-    <a class="social-icon" href="https://github.com/annabavaresco" target="_blank"> <i class="fa fa-github"></i></a>
-    <a class="social-icon" href="https://twitter.com/AnnaBavare44729" target="_blank"> <i class="fa fa-twitter"></i></a>
-    
-  </div>
-</center>
-
-<!-- <img src="my_picture.png" alt="Avatar" width="200" height="200">
-
-<p>
-    Hello, I'ma a PhD student at UvA
-</p> -->
-
-</body>
-</html>
+{% 
+    include widgets/news_card.html 
+    news=news limit=page.num_selected 
+    title='News'
+%}

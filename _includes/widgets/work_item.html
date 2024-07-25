@@ -1,0 +1,12 @@
+{% assign item = include.item %}
+
+<div class="d-none d-md-block">
+    <div class="row no-gutters border-bottom border-gray">
+
+        <div class="col p-3 ml-md-2">
+            <p class="mt-0 mb-0 small text-muted">{{ item.time }}, {{ item.place }}</p>
+            <h6 class="mt-0 mb-1 font-weight-normal"> {{ item.position }} </h6>
+            <p class="mt-0 mb-0 small text-muted">{{ item.description }}</p>
+        </div>
+    </div>
+</div>

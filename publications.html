@@ -1,75 +1,32 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <link rel="icon" type="image/png" href="ab_logo.png"/>
-    <title>Publications</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="phone_style.css">
-</head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<body>
-    <div class="exp-button-group">
-        <div>
-            <button class="button" onclick="window.open('index.html', '_self');"><i class="fa fa-home"></i> HOME</button>
+---
+layout: default
+title : Publications
+navbar_name: Publications
+body_attr: >-
+  data-spy="scroll" data-target="#navbar-year" data-offset="100"
+---
+
+{% assign pubs_by_year = site.publications | sort: "date" | reverse | group_by_exp: "item", "item.date | date: '%Y'" %}
+
+<div class="row">
+    <div class="col-12 col-lg-10">
+        {% for year in pubs_by_year %}
+        {% assign num_papers = year.items | size %}
+        <h2 class="pt-4" id="year-{{ year.name }}">{{ year.name }}</h2>
+        <div class="my-0 p-0 bg-white shadow-sm rounded-sm">
+            {% for item in year.items %}
+                {% include widgets/publication_item.html item=item %}
+            {% endfor %}
         </div>
-        <div>
-            <a href="a.bavaresco@uva.nl" target="_blank" class="social-icon-upper"> <i class="fa fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/anna-bavaresco-446210243" target="_blank" class="social-icon-upper"> <i class="fa fa-linkedin"></i></a>
-            <a href="https://github.com/annabavaresco" target="_blank" class="social-icon-upper"> <i class="fa fa-github"></i></a>
-            <a href="https://twitter.com/AnnaBavare44729" target="_blank" class="social-icon-upper"> <i class="fa fa-twitter"></i></a>
-        </div>
-      </div>
-    <h1 style="text-align: center;">List of publications</h1>
-    
-    <h2>Publications</h2>
-
-    <div class="paragraph">
-        <p>
-            <ul>
-                <li><b>Bavaresco, A.</b>, Bernardi, R., Bertolazzi, L., Elliott, D., Fernández, R., Gatt, A., ... & Testoni, A. (2024). <i>LLMs instead of Human Judges? A Large Scale Empirical Study across 20 NLP Evaluation Tasks</i>, arXiv preprint [<ahref="https://arxiv.org/abs/2406.18403" target="_blank">PAPER</a>] </li>
-                <li><b>Bavaresco, A.</b>, Testoni, A., & Fernández, R. <i>Don't Buy it! Reassessing the Ad Understanding Abilities of Contrastive Multimodal Models</i>, Accepted to ACL 2024 (main conference) [<a href="https://arxiv.org/abs/2405.20846" target="_blank">PAPER</a>]</li>
-                <li> Truong, N., <b>Bavaresco, A.</b> & Hasson, U. <i>Unsupervised feature selection methods for modeling human similarity 
-                    judgments with deep neural networks</i>, Journal of Vision 2023;23(9):4975 [<a href="https://jov.arvojournals.org/article.aspx?articleid=2791536" target="_blank">ABSTRACT</a>]</li>
-                <li>Tarigopula, H. P., Fairhall, S. L., <b>Bavaresco, A.</b>, Truong, N., & Hasson, U. <i>Improved prediction of behavioral and neural similarity spaces using
-                        pruned DNNs</i>, Neural Networks, 2023 [<a href="https://www.sciencedirect.com/science/article/pii/S0893608023004690?via%3Dihub" target="_blank">URL</a>] </li>
-                
-            </ul>
-        </p>
-
-    </div>
-    <!-- <h2>Manuscripts submitted for peer review / in preparation</h2>
-
-    <div class="paragraph">
-        <p>
-            <ul>
-                <li> <b>Bavaresco, A.</b>, Truong, N., & Hasson, U. (submitted) <i>Visual comparison constrains selection
-                    of object features: evidence from supervised pruning of deep neural nets</i></li>
-                <li><b>Bavaresco, A.</b>, Truong, N. (in preparation) <i>Improving the fit between human and
-                        DNN representational spaces using weighted least squares regression.</i></li>
-                
-            </ul>
-        </p>
-
-    </div> -->
-
-
-
-    <h2>Submitted talks</h2>
-    <div class="paragraph">
-        <p>
-            <ul>
-                <li> <i>Improving the fit between human and DNN
-                    representational spaces using weighted least squares
-                    regression</i>, <a href="https://event.unitn.it/aisc2022/" target="_blank">AISC 2022</a> </li>
-            </ul>
-        </p>
-
+        {% endfor %}
     </div>
 
+    <div class="col-2 d-none d-lg-block">
+        <div id="navbar-year" class="nav nav-pills flex-column sticky-top" style="top: 80px">
+            {% for year in pubs_by_year %}
+            <a class="nav-link d-block" href="#year-{{ year.name }}">{{ year.name }}</a>
+            {% endfor %}
+        </div>
+    </div>
 
-    
-
-
-</body>
-</html>
+</div>
