@@ -2,7 +2,7 @@
 title:          LLMs instead of Human Judges? A Large Scale Empirical Study across 20 NLP Evaluation Tasks
 date:           2024-06-15 00:01:00 +0800
 selected:       true
-pub:            Arxiv
+pub:            ArXiv
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
 # pub_last:       ' <span class="badge badge-pill badge-custom badge-success">Spotlight</span>'
