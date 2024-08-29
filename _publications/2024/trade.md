@@ -17,5 +17,5 @@ authors:
   - Raquel Fernández
 links:
   Code: https://github.com/dmg-illc/trade
-  Paper: https://arxiv.org/abs/2405.20846
+  Paper: https://aclanthology.org/2024.acl-short.77/
 ---
