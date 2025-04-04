@@ -2,7 +2,7 @@
 title:          Experiential Semantic Information and Brain Alignment: Are Multimodal Models Better than Language Models?
 date:           2025-04-04 00:01:00 +0800
 selected:       true
-pub:            ArXiv
+pub:            "ArXiv"
 # pub_pre:        "Submitted to "
 # pub_post:       'Under review.'
 # pub_last:       ' <span class="badge badge-pill badge-custom badge-success">Spotlight</span>'
