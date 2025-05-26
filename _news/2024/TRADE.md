@@ -1,5 +1,5 @@
 ---
-title:          Paper accepted to ACL main
+title:          Paper Accepted to ACL Main
 date:           2024-05-15 00:01:00 +0800
 
 headline: >-
