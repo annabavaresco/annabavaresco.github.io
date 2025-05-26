@@ -1,5 +1,5 @@
 ---
-title:          New preprint on ArXiv
+title:          New ArXiv Preprint
 date:           2024-06-15 00:01:00 +0800
 
 headline: >-
