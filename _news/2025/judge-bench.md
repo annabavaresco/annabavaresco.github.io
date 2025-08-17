@@ -7,5 +7,5 @@ headline: >-
   
 
 links:
-  Paper: https://arxiv.org/abs/2406.18403
+  Paper: https://aclanthology.org/2025.acl-short.20/
 ---

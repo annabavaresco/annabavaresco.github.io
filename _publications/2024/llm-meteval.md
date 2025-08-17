@@ -34,5 +34,5 @@ authors:
   - Alberto Testoni
 links:
   Code: https://github.com/dmg-illc/JUDGE-BENCH
-  Paper: https://arxiv.org/abs/2406.18403
+  Paper: https://aclanthology.org/2025.acl-short.20/
 ---

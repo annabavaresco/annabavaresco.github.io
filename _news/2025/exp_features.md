@@ -7,5 +7,5 @@ headline: >-
 # cover:          assets/images/covers/cover1.jpg
 
 links:
-  Paper: https://arxiv.org/abs/2504.00942
+  Paper: https://aclanthology.org/2025.conll-1.10/
 ---

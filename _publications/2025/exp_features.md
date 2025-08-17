@@ -16,5 +16,6 @@ authors:
   - Raquel Fernández
 links:
 
-  Paper: https://arxiv.org/abs/2504.00942
+  Paper: https://aclanthology.org/2025.conll-1.10/
+  Code: https://github.com/dmg-illc/exp-info-models-brain
 ---
