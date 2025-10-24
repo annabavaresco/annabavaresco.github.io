@@ -11,9 +11,20 @@ navbar_name: Teaching
 
 <div class="my-3 p-0 bg-white shadow-sm rounded-sm">
     <h4 class="border-bottom border-gray p-3 mb-0">
+        2025/2026 
+    </h4>
+    {% assign item1 = site.taught_courses | where: "course_id", "ANCM25" | first %}
+    {% include widgets/teaching_item.html item=item1 %}
+    
+</div>
+
+<div class="my-3 p-0 bg-white shadow-sm rounded-sm">
+    <h4 class="border-bottom border-gray p-3 mb-0">
         2024/2025 
     </h4>
     {% assign item1 = site.taught_courses | where: "course_id", "ANCM24" | first %}
+    {% include widgets/teaching_item.html item=item1 %}
+    {% assign item1 = site.taught_courses | where: "course_id", "NLP2" | first %}
     {% include widgets/teaching_item.html item=item1 %}
 </div>
 
