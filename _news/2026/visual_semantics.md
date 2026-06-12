@@ -7,5 +7,5 @@ headline: >-
 # cover:          assets/images/covers/cover1.jpg
 
 links:
-  Paper: _publications/2026/Visual_Semantics_Arxiv.pdf
+  Paper: assets/pdfs/Visual_Semantics_Arxiv.pdf
 ---
